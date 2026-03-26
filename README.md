@@ -97,3 +97,23 @@ By the end of this lab, you should be able to say:
 ### Optional
 
 1. [Flutter Web Chatbot](./lab/tasks/optional/task-1.md)
+
+## Deploy
+
+### Required environment variables
+
+Create `.env.docker.secret` and set:
+
+- `BOT_TOKEN`
+- `LMS_API_KEY`
+- `LLM_API_KEY`
+- `LLM_API_BASE_URL`
+- `LLM_API_MODEL`
+
+### Start services
+
+```bash
+cd ~/se-toolkit-lab-7
+pkill -f "bot.py" 2>/dev/null
+docker compose --env-file .env.docker.secret up --build -d
+docker compose --env-file .env.docker.secret ps
