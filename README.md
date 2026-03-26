@@ -117,3 +117,6 @@ cd ~/se-toolkit-lab-7
 pkill -f "bot.py" 2>/dev/null
 docker compose --env-file .env.docker.secret up --build -d
 docker compose --env-file .env.docker.secret ps
+
+### Notes
+Minor formatting fix
